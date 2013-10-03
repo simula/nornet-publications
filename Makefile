@@ -1,2 +1,11 @@
+REFERENCES=~/src/papers/Referenzarchiv.bib
+
 all:
-	bibtexconv ~/src/papers/Referenzarchiv.bib <NorNet-Publications.export >NorNet-Publications.html
+	mkdir -p bibxml bibtex
+	bibtexconv $(REFERENCES) -check-urls -only-check-new-urls <NorNet-Publications.export -export-to-separate-xmls=bibxml/ >/dev/null
+	find bibxml/ -name "*.xml" | sort | xargs cat >bibxml/AllReferences.txt
+	mv bibxml/AllReferences.txt bibxml/AllReferences.xml
+	bibtexconv $(REFERENCES) -add-notes-with-isbn-and-issn <NorNet-Publications.export -export-to-separate-bibtexs=bibtex/ >/dev/null
+	find bibtex/ -name "*.bib" | sort | xargs cat >bibtex/AllReferences.txt
+	mv bibtex/AllReferences.txt bibtex/AllReferences.bib
+	bibtexconv $(REFERENCES) <NorNet-Publications.export >NorNet-Publications.html
