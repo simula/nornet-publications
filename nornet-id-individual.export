@@ -1,14 +1,19 @@
-cite draft-dreibholz-ipv4-flowlabel		TD-ID01
+# $Id: dreibholz-id-individual.export 3418 2013-10-21 14:12:20Z dreibh $
 
-cite draft-dreibholz-rserpool-asap-hropt	TD-ID02
-cite draft-dreibholz-rserpool-enrp-takeover	TD-ID03
-cite draft-dreibholz-rserpool-delay		TD-ID04
-cite draft-coene-rserpool-applic-ipfix		TD-ID05
-cite draft-dreibholz-rserpool-applic-distcomp	TD-ID06
-cite draft-dreibholz-rserpool-applic-mobility	TD-ID07
-cite draft-dreibholz-rserpool-score		TD-ID08
+cite draft-dreibholz-ipv4-flowlabel             TD-ID01   # @FlowRoutingPage
 
-cite draft-tuexen-tsvwg-sctp-multipath		TD-ID09
-cite draft-dreibholz-tsvwg-sctpsocket-multipath	TD-ID10
-cite draft-dreibholz-tsvwg-sctpsocket-sqinfo	TD-ID11
-cite draft-hohendorf-secure-sctp		TD-ID12
+cite draft-dreibholz-rserpool-asap-hropt        TD-ID02   # @RSerPoolPage
+cite draft-dreibholz-rserpool-enrp-takeover     TD-ID03   # @RSerPoolPage
+cite draft-dreibholz-rserpool-delay             TD-ID04   # @RSerPoolPage
+cite draft-coene-rserpool-applic-ipfix          TD-ID05   # @RSerPoolPage
+cite draft-dreibholz-rserpool-applic-distcomp   TD-ID06   # @RSerPoolPage
+cite draft-dreibholz-rserpool-applic-mobility   TD-ID07   # @RSerPoolPage
+cite draft-dreibholz-rserpool-score             TD-ID08   # @RSerPoolPage
+cite draft-dreibholz-rserpool-nextgen-ideas     TD-ID09   # @RSerPoolPage
+
+cite draft-tuexen-tsvwg-sctp-multipath          TD-ID10   # @SCTPPage
+cite draft-dreibholz-tsvwg-sctpsocket-multipath TD-ID11   # @SCTPPage
+cite draft-dreibholz-tsvwg-sctpsocket-sqinfo    TD-ID12   # @SCTPPage
+cite draft-hohendorf-secure-sctp                TD-ID13   # @SCTPPage
+
+cite draft-dreibholz-vnfpool-rserpool-applic    TD-ID14   # @RSerPoolPage
