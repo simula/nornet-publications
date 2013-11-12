@@ -40,7 +40,7 @@ sort year/D month/D day/D title/A
 echo <!-- BEGIN-OF-PUBLICATIONS -->\n\n
 
 echo <p class=\"description\">
-echo The complete BibTeX references in a single file can be found <a type="text/x-bibtex" href="http://www.nornet-testbed.no/pub/nornet-publications/bibtex/AllReferences.bib">here</a>!
+echo The complete BibTeX references in a single file can be found <a type="text/x-bibtex" href="https://www.nntb.no/pub/nornet-publications/bibtex/AllReferences.bib">here</a>!
 echo </p>\n\n
 
 
@@ -71,17 +71,17 @@ template+ [[<a type="%{url-mime}" href="%{url}">%{url-type}</a>, ]%{url-size-kib
 # Use <span> to avoid link-break before language flag image. &nbsp; would not work here!
 template+ [%{url}%{is-not?}[%x%{is-not?}<span style="white-space:nowrap;">, ]]
 # ------ Language variants --------------------
-template+ [%x%{is?norsk}<img style="height: 0.75em;" alt="in Norwegian" title="in Norwegian" src="http://www.nornet-testbed.no/pub/nornet-publications/graphics/flags/flag-norway.png" />
-template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="http://www.nornet-testbed.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
-template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="http://www.nornet-testbed.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
-template+ |%x%{is?english}<img style="height: 0.75em;" alt="in English" title="in English" src="http://www.nornet-testbed.no/pub/nornet-publications/graphics/flags/flag-england.png" />
+template+ [%x%{is?norsk}<img style="height: 0.75em;" alt="in Norwegian" title="in Norwegian" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-norway.png" />
+template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
+template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
+template+ |%x%{is?english}<img style="height: 0.75em;" alt="in English" title="in English" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-england.png" />
 template+ |in %{language}]
 # ---------------------------------------------
 template+ [%{language}%{is-not?})[%{url}%{is-not?}</span>]|%{url}%{is-not?})]
 # ***** Bibliographic data of publication
 template+ [, %{how-published}][, in <em>%{journal}</em>][, in <em>%{booktitle}</em>]
 template+ [, %{custom-3}|, %{type}[~%{number}][, %{series}][, vol.~%{volume}][, pp.~%{pages}]|[, %{series}][, vol.~%{volume}][, no.~%{number}][, pp.~%{pages}]]
-template+ [, %$][, %{school}][, %{institution}][, URN~<a href="http://www.nbn-resolving.de/%{urn}">%{urn}</a>][, DOI~<a href="http://dx.doi.org/%{doi}">%{doi}</a>][, %{isbn}][, %{issn}][, %{address}][, %{note}][, [[%{month-name}~%{day}, |%{month-name}~]%{year}], \[<a type="text/x-bibtex" href="http://www.nornet-testbed.no/pub/nornet-publications/bibtex/%{label}.bib">BibTeX</a>, <a type="text/xml" href="http://www.nornet-testbed.no/pub/nornet-publications/bibxml/%{label}.xml">XML</a>\].
+template+ [, %$][, %{school}][, %{institution}][, URN~<a href="http://www.nbn-resolving.de/%{urn}">%{urn}</a>][, DOI~<a href="http://dx.doi.org/%{doi}">%{doi}</a>][, %{isbn}][, %{issn}][, %{address}][, %{note}][, [[%{month-name}~%{day}, |%{month-name}~]%{year}], \[<a type="text/x-bibtex" href="https://www.nntb.no/pub/nornet-publications/bibtex/%{label}.bib">BibTeX</a>, <a type="text/xml" href="https://www.nntb.no/pub/nornet-publications/bibxml/%{label}.xml">XML</a>\].
 # ****** Awards
 template+ [ <strong>%{custom-1}.</strong>]
 
