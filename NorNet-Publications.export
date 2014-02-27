@@ -66,7 +66,7 @@ template+ [./get-author-url authors.list "%{author-family-name}[, %{author-give-
 template+ %{end-author-loop}:
 
 # ***** Title
-template+  [``<a type="%{url-mime}" href="%{url}">%{title}</a>´´|``%{title}´´]
+template+  [«<a type="%{url-mime}" href="%{url}">%{title}</a>»|«%{title}»]
 # ****** URL
 template+ [%{url}%{is-not?} (|%{language}%{is-not?} (]
 template+ [[<a type="%{url-mime}" href="%{url}">%{url-type}</a>, ]%{url-size-kib}~KiB]
