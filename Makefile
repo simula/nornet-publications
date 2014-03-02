@@ -8,4 +8,5 @@ all:
 	bibtexconv $(REFERENCES) -add-notes-with-isbn-and-issn <NorNet-Publications.export -export-to-separate-bibtexs=bibtex/ >/dev/null
 	find bibtex/ -name "*.bib" | sort | xargs cat >bibtex/AllReferences.txt
 	mv bibtex/AllReferences.txt bibtex/AllReferences.bib
-	bibtexconv $(REFERENCES) <NorNet-Publications.export >NorNet-Publications.html
+	bibtexconv $(REFERENCES) <NorNet-Publications.export >NorNet-Publications.html.in
+	sed -e "s/<\!-- BEGIN-OF-DATE -->.*<\!-- END-OF-DATE -->/<\!-- BEGIN-OF-DATE -->on `date "+%d.%m.%Y %H:%M:%S %Z"`<\!-- END-OF-DATE -->/g" <NorNet-Publications.html.in >NorNet-Publications.html
