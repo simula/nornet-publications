@@ -60,7 +60,9 @@ template+ [./get-author-url authors.list '%{author-family-name}[, %{author-give-
 template+ %{end-author-loop}:
 
 # ***** Title
+template+ <span[ xml:lang="%{xml-language}" lang="%{xml-language}"]>
 template+  [«<a type="%{url-mime}" href="%{url}">%{title}</a>»|«%{title}»]
+template+ </span>
 # ****** URL
 template+ [%{url}%{is-not?} (|%{language}%{is-not?} (]
 template+ [[<a type="%{url-mime}" href="%{url}">%{url-type}</a>, ]%{url-size-kib}~KiB]
@@ -126,7 +128,7 @@ echo \n
 
 
 echo <p class="description" style="font-size:75%;">\n
-echo Publications list generated <\!-- BEGIN-OF-DATE -->recently<\!-- END-OF-DATE --> by Thomas Dreibholz's <a href="http://www.iem.uni-due.de/~dreibh/bibtexconv/">BibTeXConv</a> script.\n
+echo Publications list generated <!-- BEGIN-OF-DATE -->recently<!-- END-OF-DATE --> by Thomas Dreibholz's <a href="http://www.iem.uni-due.de/~dreibh/bibtexconv/">BibTeXConv</a> script.\n
 echo </p>\n
 
 
