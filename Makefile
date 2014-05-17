@@ -2,6 +2,8 @@ REFERENCES=~/src/papers/Referenzarchiv.bib
 
 all:
 	mkdir -p bibxml bibtex
+	rm -f bibxml/AllReferences.txt
+	rm -f bibtex/AllReferences.bib
 	bibtexconv $(REFERENCES) -check-urls -only-check-new-urls <NorNet-Publications.export -export-to-separate-xmls=bibxml/ >/dev/null
 	find bibxml/ -name "*.xml" | sort | xargs cat >bibxml/AllReferences.txt
 	mv bibxml/AllReferences.txt bibxml/AllReferences.xml
