@@ -28,8 +28,9 @@
 
 echo <ul>\n
 echo  <li><a href="#Reviewed">Peer-Reviewed Publications</a></li>\n
-echo  <li><a href="#Standardisation">Standardisation Documents</a></li>\n
+echo  <li><a href="#Thesises">Thesises</a></li>\n
 echo  <li><a href="#Reports">Reports</a></li>\n
+echo  <li><a href="#Standardisation">Standardisation Documents</a></li>\n
 echo  <li><a href="#Presentations">Presentations</a></li>\n
 echo </ul>\n
 
@@ -97,7 +98,20 @@ clear
 echo <h3 id="Reviewed">Peer-Reviewed Publications</h3>\n
 include nornet-journals.export
 include nornet-papers.export
+sort year/D month/D day/D title/A
+export
+echo \n
+
+clear
+echo <h3 id="Thesises">Thesises</h3>\n
 include nornet-thesises.export
+sort year/D month/D day/D title/A
+export
+echo \n
+
+clear
+echo <h3 id="Reports">Reports</h3>\n
+include nornet-others.export
 sort year/D month/D day/D title/A
 export
 echo \n
@@ -107,13 +121,6 @@ echo <h3 id="Standardisation">Standardisation Documents</h3>\n
 include nornet-rfcs.export
 include nornet-id-workinggroup.export
 include nornet-id-individual.export
-sort year/D month/D day/D title/A
-export
-echo \n
-
-clear
-echo <h3 id="Reports">Reports</h3>\n
-include nornet-others.export
 sort year/D month/D day/D title/A
 export
 echo \n
