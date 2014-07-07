@@ -1,3 +1,4 @@
+# Thomas
 cite PAMS2013-NorNet            TD-P46
 cite EWNS2013-NorNet            TD-P47
 cite ConTEL2013                 TD-P48
@@ -7,7 +8,15 @@ cite IFIPNetworking2014         TD-P51
 cite IWQoS2014                  TD-P52
 cite Globecom2014               TD-P53
 
+# Jarle
 cite bjorgeengen2010using       JB-P01
 
+# Simone
 cite PFAB14                     SF-P01
 cite HFW14                      SF-P02
+
+# Ahmed
+cite DLH+12                     AE-P01
+
+# Ioana
+cite LED+13                     IL-P01
