@@ -23,16 +23,15 @@
 
 
 
-#echo <!-- ###### Publications ############################################# -->\n
-echo <script type="text/javascript">\n
-echo var head  = document.getElementsByTagName('head')[0];\n
-echo var style = document.createElement('style');\n
-echo style.type = 'text/css';\n
-echo style.appendChild(document.createTextNode('li.treeview-collapsed { list-style-image: url(graphics/icons/icon-collapsed.svg); } li.treeview-expanded { list-style-image: url(graphics/icons/icon-expanded.svg); }'));\n
-echo head.appendChild(style);\n
-echo </script>\n
-echo <script type="text/javascript" src="publication-list-treeview.js"></script>\n\n
-
+#echo <!-- ###### Scripting ################################################ -->\n
+#echo <script type="text/javascript">\n
+#echo var head  = document.getElementsByTagName('head')[0];\n
+#echo var style = document.createElement('style');\n
+#echo style.type = 'text/css';\n
+#echo style.appendChild(document.createTextNode('li.treeview-collapsed { list-style-image: url(graphics/icons/icon-#collapsed.svg); } li.treeview-expanded { list-style-image: url(graphics/icons/icon-expanded.svg); }'));\n
+#echo head.appendChild(style);\n
+#echo </script>\n
+#echo <script type="text/javascript" src="publication-list-treeview.js"></script>\n\n
 
 
 
@@ -67,7 +66,8 @@ templatenew
 template+ [%{begin-subdivision-year}<h4>%{year}</h4><ul>\n\n]
 
 # ****** Begin of Entry
-template+ <li class="treeview-collapsed"><p class=\"description\">
+#template+ <li class="treeview-collapsed"><p class=\"description\">
+template+ <li><p class=\"description\">
 
 # ***** Authors
 template+ %{begin-author-loop}[%{is-first-author?}|%{is-last-author?} and |; ]
@@ -101,19 +101,19 @@ template+ [ <strong>%{custom-1}.</strong>]
 template+ </p>
 
 # ***** Details
-template+ [[%{keywords}][%{abstract}][%{url}][%{url-md5}]%{is-not?}\n
-template+ <div class="publication-details-hiddenbox">
-template+ [<p class="publication-details"><strong>Keywords: </strong>
-template+ <span[ xml:lang="%{xml-language}"]>%{keywords}</span></p>
-template+ ]
-template+ [<p class="publication-details"><strong>Abstract: </strong>
-template+ <span[ xml:lang="%{xml-language}"]>%{abstract}</span></p>
-template+ ]
-template+ [<p class="publication-details" style="text-align: left;"><strong>URL:&nbsp;</strong>
-template+ <a[ type="%{url-mime}"] href="%{url}">%{url}</a></p>
-template+ ]
-template+ [<p class="publication-details"><strong>MD5: </strong> %{url-md5}</p>]
-template+ </div>\n]
+#template+ [[%{keywords}][%{abstract}][%{url}][%{url-md5}]%{is-not?}\n
+#template+ <div class="publication-details-hiddenbox">
+#template+ [<p class="publication-details"><strong>Keywords: </strong>
+#template+ <span[ xml:lang="%{xml-language}"]>%{keywords}</span></p>
+#template+ ]
+#template+ [<p class="publication-details"><strong>Abstract: </strong>
+#template+ <span[ xml:lang="%{xml-language}"]>%{abstract}</span></p>
+#template+ ]
+#template+ [<p class="publication-details" style="text-align: left;"><strong>URL:&nbsp;</strong>
+#template+ <a[ type="%{url-mime}"] href="%{url}">%{url}</a></p>
+#template+ ]
+#template+ [<p class="publication-details"><strong>MD5: </strong> %{url-md5}</p>]
+#template+ </div>\n]
 
 # ****** End of Entry
 template+ </li>\n\n
