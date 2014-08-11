@@ -4,7 +4,7 @@
 include nornet-others.export
 include nornet-papers.export
 include nornet-rfcs.export
-include nornet-thesises.export
+include nornet-theses.export
 include nornet-id-workinggroup.export
 include nornet-id-individual.export
 include nornet-journals.export

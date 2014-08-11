@@ -54,7 +54,7 @@ echo <h2 id="Publications">Publications</h2>\n\n
 
 echo <ul>\n
 echo  <li><a href="#Reviewed">Peer-Reviewed Publications</a></li>\n
-echo  <li><a href="#Thesises">Thesises</a></li>\n
+echo  <li><a href="#Theses">Theses</a></li>\n
 echo  <li><a href="#Reports">Reports</a></li>\n
 echo  <li><a href="#Standardisation">Standardisation Documents</a></li>\n
 echo  <li><a href="#Presentations">Presentations</a></li>\n
@@ -164,8 +164,8 @@ export
 echo \n
 
 clear
-echo <h3 id="Thesises">Thesises</h3>\n
-include nornet-thesises.export
+echo <h3 id="Theses">Theses</h3>\n
+include nornet-theses.export
 sort year/D month/D day/D title/A
 export
 echo \n
