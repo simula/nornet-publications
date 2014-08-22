@@ -7,23 +7,25 @@ cite HiOA2013                   TD-A18
 cite Louvain2013                TD-A19
 cite IETF87                     TD-A20
 cite TKNBerlin2013              TD-A21
-cite NNUW1-Dreibholz-NorNetCore-Introduction	TD-A22
-cite NNUW1-Dreibholz-NorNetCore-Tutorial	TD-A23
+cite NNUW1-Dreibholz-NorNetCore-Introduction    TD-A22
+cite NNUW1-Dreibholz-NorNetCore-Tutorial        TD-A23
 cite CAIA2014                                   TD-A24
 cite IETF89-NorNet                              TD-A25
 cite IETF89-VNFPOOL                             TD-A26
 cite NYU2014                                    TD-A27
 cite Princeton2014                              TD-A28
 cite UBC2014                                    TD-A29
+cite NNUW2-Dreibholz-NorNetCore-Introduction    TD-A30
+cite NNUW2-Dreibholz-NorNetCore-Tutorial        TD-A31
 
-cite NNUW1-Baltrunas-NorNetEdge-Introduction	NNUW1-A1
-cite NNUW1-Baltrunas-NorNetEdge-Tutorial	NNUW1-A2
-cite NNUW1-Adhari-CC				NNUW1-A3
-cite NNUW1-Rathgeb-Security			NNUW1-A4
-cite NNUW1-Paasch-MPTCP				NNUW1-A5
-cite NNUW1-Welzl-CC				NNUW1-A6
-cite NNUW1-Oesleboe-DPI				NNUW1-A7
-cite NNUW1-Sterbenz-GpENI			NNUW1-A8
+cite NNUW1-Baltrunas-NorNetEdge-Introduction    NNUW1-A1
+cite NNUW1-Baltrunas-NorNetEdge-Tutorial        NNUW1-A2
+cite NNUW1-Adhari-CC                            NNUW1-A3
+cite NNUW1-Rathgeb-Security                     NNUW1-A4
+cite NNUW1-Paasch-MPTCP                         NNUW1-A5
+cite NNUW1-Welzl-CC                             NNUW1-A6
+cite NNUW1-Oesleboe-DPI                         NNUW1-A7
+cite NNUW1-Sterbenz-GpENI                       NNUW1-A8
 
 cite jarleb-geilo-2014                          JB-A01
 
