@@ -1,4 +1,4 @@
-// $Id: bibtexconv.cc 1838 2014-04-12 19:02:25Z dreibh $
+// $Id: publication-list-treeview.js 3584 2014-07-14 19:18:24Z dreibh $
 //
 // Publication List Treeview
 // Copyright (C) 2014 by Thomas Dreibholz
@@ -39,6 +39,12 @@ function handleClickOnListItem(event) {
    else {
       if (event.target.parentNode.tagName == 'LI') {
          listItem = event.target.parentNode;   // Case #3: parent is bullet point.
+      }
+      else if (event.target.parentNode.parentNode.tagName == 'LI') {
+         listItem = event.target.parentNode.parentNode;   // Case #4: parent of parent is bullet point.
+      }
+      else {
+         return;   // Case #5: click elsewhere -> do nothing!
       }
    }
    
