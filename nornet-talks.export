@@ -1,12 +1,13 @@
-cite Karlstad2012               TD-A13
-cite Stavanger2012              TD-A14
-cite Geilo2013-NorNetCore       TD-A15
-cite Narvik2013                 TD-A16
-cite Trondheim2013              TD-A17
-cite HiOA2013                   TD-A18
-cite Louvain2013                TD-A19
-cite IETF87                     TD-A20
-cite TKNBerlin2013              TD-A21
+# Thomas's talks:
+cite Karlstad2012                               TD-A13
+cite Stavanger2012                              TD-A14
+cite Geilo2013-NorNetCore                       TD-A15
+cite Narvik2013                                 TD-A16
+cite Trondheim2013                              TD-A17
+cite HiOA2013                                   TD-A18
+cite Louvain2013                                TD-A19
+cite IETF87                                     TD-A20
+cite TKNBerlin2013                              TD-A21
 cite NNUW1-Dreibholz-NorNetCore-Introduction    TD-A22
 cite NNUW1-Dreibholz-NorNetCore-Tutorial        TD-A23
 cite CAIA2014                                   TD-A24
@@ -17,7 +18,10 @@ cite Princeton2014                              TD-A28
 cite UBC2014                                    TD-A29
 cite NNUW2-Dreibholz-NorNetCore-Introduction    TD-A30
 cite NNUW2-Dreibholz-NorNetCore-Tutorial        TD-A31
+cite NNUW2-Alay-Multipath-Transport             TD-A32
+cite KTH2014                                    TD-A33
 
+# NNUW-1:
 cite NNUW1-Baltrunas-NorNetEdge-Introduction    NNUW1-A1
 cite NNUW1-Baltrunas-NorNetEdge-Tutorial        NNUW1-A2
 cite NNUW1-Adhari-CC                            NNUW1-A3
@@ -27,6 +31,23 @@ cite NNUW1-Welzl-CC                             NNUW1-A6
 cite NNUW1-Oesleboe-DPI                         NNUW1-A7
 cite NNUW1-Sterbenz-GpENI                       NNUW1-A8
 
+# NNUW-2:
+cite NNUW2-Jakobsson-Availability               NNUW2-A01
+cite NNUW2-Livadariu-Connectivity               NNUW2-A02
+cite NNUW2-Golkar-Stability                     NNUW2-A03
+cite NNUW2-Schwerdel-ToMaTo                     NNUW2-A04
+cite NNUW2-Kvittem-Streaming-Quality            NNUW2-A05
+cite NNUW2-Ytrehus-MPTCP                        NNUW2-A06
+cite NNUW2-Aziz-SIP                             NNUW2-A07
+cite NNUW2-Adhari-Multipath-Transport           NNUW2-A08
+cite NNUW2-Grinnemo-MPTCP                       NNUW2-A09
+cite NNUW2-Sterbenz-Routing                     NNUW2-A10
+cite NNUW2-Michelinakis-Bandwidth-Estimation    NNUW2-A11
+cite NNUW2-Siwakoti-MBB-Measurements            NNUW2-A12
+cite NNUW2-Elmokashfi-MBB-Measurements          NNUW2-A13
+cite NNUW2-Hayes-Shared-Bottleneck-Detection    NNUW2-A14
+
+# Jarle's talks:
 cite jarleb-geilo-2014                          JB-A01
 
 
