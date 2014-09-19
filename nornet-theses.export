@@ -1,5 +1,11 @@
+# Master theses
 cite Siwakoti2014 T01 "" "" "" "Masters Thesis" "Masterarbeit" "masteroppgave"
 cite Pakmehr2014  T02 "" "" "" "Masters Thesis" "Masterarbeit" "masteroppgave"
 cite Golkar2014   T03 "" "" "" "Masters Thesis" "Masterarbeit" "masteroppgave"
 cite Simonsen2014 T04 "" "" "" "Masters Thesis" "Masterarbeit" "masteroppgave"
 cite Vaagland2014 T05 "" "" "" "Masters Thesis" "Masterarbeit" "masteroppgave"
+
+# Ph.D. theses
+
+# Habilitation theses
+cite Dre2012      TD-T03 "" "" "" "Habilitation Treatise" "Habilitationsschrift" "habilitasjonsavhandling"
