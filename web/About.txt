@@ -1,9 +1,0 @@
-NorNet is a national infrastructure targeting the networking research community in Norway and beyond. The goal of NorNet is to provide a flexible platform for supporting a wide range of experiments and for testing new solutions that are not ready for deployment in operative networks.
-
-NorNet is financed by Simula Resaerch Laboratory and the Research Council of Norway through their <a href="http://www.forskningsradet.no/prognett-infrastruktur/">INFRASTRUKTUR program</a> (project number 208798/F50).
-
-For questions or inquiries, please contact <a title="amund's homepage" href="http://simula.no/people/amundk">Dr. Amund Kvalbein</a>.
-
-<a href="http://simula.no"> <img class="aligncenter" title="simula" src="img/simula_logo.gif" alt="" width="244" height="17" /></a>
-<a href="http://www.forskningsradet.no"> <img class="aligncenter" title="forskningsradet" src="img/nfr_logo_eng.gif" alt="" width="216" height="36" /></a>
-<a href="http://www.uninett.no"> <img class="aligncenter" title="uninett" src="img/logo_uninett.gif" alt="" width="200" height="49" /></a>
