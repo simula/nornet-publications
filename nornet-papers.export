@@ -19,10 +19,14 @@ cite bjorgeengen2010using       JB-P01
 # Simone
 cite PFAB14                     SF-P01
 cite HFW14                      SF-P02
-cite csws-2014-paasch           SF-P03
 
 # Ahmed
 cite DLH+12                     AE-P01
 
 # Ioana
 cite LED+13                     IL-P01
+
+# Džiugas
+cite Baltrunas-IMC2014          DB-P01
+cite Baltrunas-SIGCOMM2015      DB-P02
+cite Baltrunas-INFOCOM2015      DB-P03
