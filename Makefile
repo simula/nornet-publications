@@ -12,3 +12,7 @@ all:
 	mv bibtex/AllReferences.txt bibtex/AllReferences.bib
 	bibtexconv $(REFERENCES) <NorNet-Publications.export >NorNet-Publications.html.in
 	sed -e "s/<\!-- BEGIN-OF-DATE -->.*<\!-- END-OF-DATE -->/<\!-- BEGIN-OF-DATE -->on `date "+%d.%m.%Y %H:%M:%S %Z"`<\!-- END-OF-DATE -->/g" <NorNet-Publications.html.in >NorNet-Publications.html
+
+clean:
+	rm -f *~ NorNet-Publications.html NorNet-Publications.html.in
+	rm -rf bibtex/ bibxml/

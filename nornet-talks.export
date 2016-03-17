@@ -30,6 +30,10 @@ cite IETF93-MPTCP                               TD-A40a
 cite IETF93-Hackathon                           TD-A40b
 cite NNUW3-Dreibholz-NorNetCore-Status          TD-A41
 cite NTW2015                                    TD-A42
+cite NICTA2016-Presentation                     TD-A43
+cite NICTA2016-Tutorial                         TD-A44
+cite HAWHamburg2016-Presentation                TD-A45
+cite HAWHamburg2016-Tutorial                    TD-A46
 
 cite Globecom2014-NorNetDemo                    TD-PD07
 
@@ -66,7 +70,7 @@ cite NNUW3-Baltrunas-NorNetEdge                 NNUW3-A01
 # --- unlisted on author's request! cite NNUW3-Mahesh                               NNUW3-A02
 cite NNUW3-Gonzalez                             NNUW3-A03
 cite NNUW3-Alay                                 NNUW3-A04
-cite NNUW3-Baltrunas-Measurements               NNUW3-A05
+# --- unlisted on author's request! cite NNUW3-Baltrunas-Measurements               NNUW3-A05
 cite NNUW3-Lutu                                 NNUW3-A06
 cite NNUW3-Brunstroem                           NNUW3-A07
 cite NNUW3-Sterbenz                             NNUW3-A08
