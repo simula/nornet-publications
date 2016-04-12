@@ -41,10 +41,10 @@
 
 echo <ul>\n
 echo  <li><a href="#Reviewed">Peer-Reviewed Publications</a></li>\n
+echo  <li><a href="#Presentations">Presentations</a></li>\n
+echo  <li><a href="#Standardisation">Standardisation Documents</a></li>\n
 echo  <li><a href="#Theses">Theses</a></li>\n
 echo  <li><a href="#Reports">Reports</a></li>\n
-echo  <li><a href="#Standardisation">Standardisation Documents</a></li>\n
-echo  <li><a href="#Presentations">Presentations</a></li>\n
 echo </ul>\n
 
 echo <p class=\"description\">\n
@@ -133,15 +133,9 @@ export
 echo \n
 
 clear
-echo <h3 id="Theses">Theses</h3>\n
-include nornet-theses.export
-sort year/D month/D day/D title/A
-export
-echo \n
-
-clear
-echo <h3 id="Reports">Reports</h3>\n
-include nornet-others.export
+echo <h3 id="Presentations">Presentations</h3>\n
+include nornet-posters-and-demos.export
+include nornet-talks.export
 sort year/D month/D day/D title/A
 export
 echo \n
@@ -156,9 +150,15 @@ export
 echo \n
 
 clear
-echo <h3 id="Presentations">Presentations</h3>\n
-include nornet-posters-and-demos.export
-include nornet-talks.export
+echo <h3 id="Theses">Theses</h3>\n
+include nornet-theses.export
+sort year/D month/D day/D title/A
+export
+echo \n
+
+clear
+echo <h3 id="Reports">Reports</h3>\n
+include nornet-others.export
 sort year/D month/D day/D title/A
 export
 echo \n
