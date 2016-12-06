@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+(
+   grep "^Name " authors.list
+   env LANG=C sort -u <authors.list | grep -v "^Name "
+) >authors.list.new
+mv authors.list.new authors.list
