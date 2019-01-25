@@ -2,6 +2,8 @@
 
 (
    grep "^Name " authors.list
-   env LANG=C sort -u <authors.list | grep -v "^Name "
+   env LANG=C sort -u <authors.list | grep -v "^Name " | sed \
+      -e "s/^#\(.*https:\/\/simula.no\/people\/dreibh.*\)$/\1/g" \
+      -e "s/^\([^#].*https:\/\/www.uni-due.de\/~be0001\/.*\)$/#\1/g"
 ) >authors.list.new
 mv authors.list.new authors.list
