@@ -1,3 +1,5 @@
 #!/bin/sh -e
 
+echo "RSync'ing bib and xml files ..."
 rsync -av --delete bibxml bibtex graphics nornetpp@voksenkollen.nntb.no:/var/www/pub/nornet-publications/
+echo "Note: the page needs to be updated manually!"
