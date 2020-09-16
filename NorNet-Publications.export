@@ -85,10 +85,14 @@ template+ [[<a type="%{url-mime}" href="%{url}">%{url-type}</a>, ]%{url-size-kib
 # Use <span> to avoid link-break before language flag image. &nbsp; would not work here!
 template+ [%{url}%{is-not?}[%x%{is-not?}<span style="white-space:nowrap;">, ]]
 # ------ Language variants --------------------
-template+ [%x%{is?norsk}<img style="height: 0.75em;" alt="in Norwegian" title="in Norwegian" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-norway.png" />
-template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
-template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
-template+ |%x%{is?english}<img style="height: 0.75em;" alt="in English" title="in English" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-england.png" />
+#template+ [%x%{is?norsk}<img style="height: 0.75em;" alt="in Norwegian" title="in Norwegian" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-norway.png" />
+#template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
+#template+ |%x%{is?chinese}<img style="height: 0.75em;" alt="in Chinese" title="in Chinese" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-china.png" />
+#template+ |%x%{is?english}<img style="height: 0.75em;" alt="in English" title="in English" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-england.png" />
+template+ [%x%{is?norsk}🇳🇴
+template+ |%x%{is?german}🇩🇪
+template+ |%x%{is?chinese}🇨🇳
+template+ |%x%{is?english}🇬🇧
 template+ |in %{language}]
 # ---------------------------------------------
 template+ [%{language}%{is-not?})[%{url}%{is-not?}</span>]|%{url}%{is-not?})]
@@ -104,10 +108,10 @@ template+ </p>
 #template+ [[%{keywords}][%{abstract}][%{url}][%{url-md5}]%{is-not?}\n
 #template+ <div class="publication-details-hiddenbox">
 #template+ [<p class="publication-details"><strong>Keywords: </strong>
-#template+ <span[ xml:lang="%{xml-language}"]>%{keywords}</span></p>
+#template+ <span[ xml:lang="%{xml-language} lang="%{xml-language}"]>%{keywords}</span></p>
 #template+ ]
 #template+ [<p class="publication-details"><strong>Abstract: </strong>
-#template+ <span[ xml:lang="%{xml-language}"]>%{abstract}</span></p>
+#template+ <span[ xml:lang="%{xml-language} lang="%{xml-language}"]>%{abstract}</span></p>
 #template+ ]
 #template+ [<p class="publication-details" style="text-align: left;"><strong>URL:&nbsp;</strong>
 #template+ <a[ type="%{url-mime}"] href="%{url}">%{url}</a></p>
