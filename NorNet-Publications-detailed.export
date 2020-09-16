@@ -87,8 +87,8 @@ template+ [./get-author-url authors.list '%{author-family-name}[, %{author-give-
 template+ %{end-author-loop}:
 
 # ***** Title
-template+ <span[ xml:lang="%{xml-language}"]>
-template+  [«<a[ type="%{url-mime}"] href="%{url}">%{title}</a>»|«%{title}»]
+template+ <span[ xml:lang="%{xml-language}" lang="%{xml-language}"]>
+template+  [«<a type="%{url-mime}" href="%{url}">%{title}</a>»|«%{title}»]
 template+ </span>
 
 # ****** Download
@@ -135,10 +135,10 @@ template+ [[%{keywords}][%{abstract}][%{url}][%{url-md5}]%{is-not?}\n
 template+ <noscript><p class="description"><strong>JavaScript is required for details!</strong></p></noscript>
 template+ <div id="Publications-%{html-label}-Details" class="publication-details-hiddenbox">
 template+ [<p class="publication-details"><strong>Keywords: </strong>
-template+ <span[ xml:lang="%{xml-language}"]>%{keywords}</span></p>
+template+ <span[ xml:lang="%{xml-language}" lang="%{xml-language}"]>%{keywords}</span></p>
 template+ ]
 template+ [<p class="publication-details"><strong>Abstract: </strong>
-template+ <span[ xml:lang="%{xml-language}"]>%{abstract}</span></p>
+template+ <span[ xml:lang="%{xml-language}" lang="%{xml-language}"]>%{abstract}</span></p>
 template+ ]
 template+ [<p class="publication-details" style="text-align: left;"><strong>URL: </strong>
 template+ <a[ type="%{url-mime}"] href="%{url}">%{url}</a></p>
