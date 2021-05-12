@@ -1,26 +1,31 @@
 # Thomas
 cite MPTCPBlog2015              TD-O01
 cite CRNA-Rapport2018           TD-O02
-cite Arxiv2101.05030            TD-O03
-cite AI-and-ML-WhitePaper2021   TD-O04
+cite CRNA-Rapport2019           TD-O03
+cite Arxiv2101.05030            TD-O04
+cite AI-and-ML-WhitePaper2021   TD-O05
+
+# Ahmet
+cite CRNA-Rapport2020           AE-O01
+
 # Džiugas
-cite CRNA-Rapport2013   DB-O01
-cite CRNA-Rapport2014   DB-O02
-cite CRNA-Rapport2015   DB-O03
-cite CRNA-Rapport2016   DB-O04
-cite CRNA-Rapport2017   DB-O05
+cite CRNA-Rapport2013           DB-O01
+cite CRNA-Rapport2014           DB-O02
+cite CRNA-Rapport2015           DB-O03
+cite CRNA-Rapport2016           DB-O04
+cite CRNA-Rapport2017           DB-O05
 
 # Olav
-cite Lysne-Rapport2015  OL-O01
-cite Lysne-Rapport2016  OL-O02
+cite Lysne-Rapport2015          OL-O01
+cite Lysne-Rapport2016          OL-O02
 
 # Others
-cite RITE-D3.4          XX-O01
+cite RITE-D3.4                  XX-O01
 
-cite NEAT-D1.1          XX-O02
-cite NEAT-D1.2          XX-O03
-cite NEAT-D1.3          XX-O04
-cite NEAT-D2.1          XX-O05
-cite NEAT-D2.2          XX-O06
-cite NEAT-D2.3          XX-O07
-cite NEAT-D4.2          XX-O08
+cite NEAT-D1.1                  XX-O02
+cite NEAT-D1.2                  XX-O03
+cite NEAT-D1.3                  XX-O04
+cite NEAT-D2.1                  XX-O05
+cite NEAT-D2.2                  XX-O06
+cite NEAT-D2.3                  XX-O07
+cite NEAT-D4.2                  XX-O08
