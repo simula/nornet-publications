@@ -30,10 +30,11 @@ cite LCN2020-PCDC                 TD-P73
 cite M2EC2021                     TD-P74
 cite EuCNC2021                    TD-P75
 cite M2EC2022                     TD-P76
-cite LCN2022-DemoPaper            TD-P77
-cite CNSM2022                     TD-P78
-cite PDCAT2022                    TD-P79
-cite HPCC2022                     TD-P80
+cite TMA2022                      TD-P77
+cite LCN2022-DemoPaper            TD-P78
+cite CNSM2022                     TD-P79   # @HiPerConTracer @SCTPPage @MPTCPPage
+cite PDCAT2022                    TD-P80
+cite HPCC2022                     TD-P81
 
 # Jarle
 cite bjorgeengen2010using         JB-P01
