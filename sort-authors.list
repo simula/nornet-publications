@@ -2,20 +2,20 @@
 
 # Simula:
 #          -e "s/^#\(.*https:\/\/www\.simula\.no\/people\/dreibh.*\)/\1/g" \
-#          -e "s/^\([^#].*https:\/\/www\.uni-due\.de\/~be0001\/.*\)$/#\1/g" | \
-# UDE:
-#          -e "s/^#\(.*https:\/\/www\.uni-due\.de\/~be0001\/.*\)/\1/g" \
+#          -e "s/^\([^#].*https:\/\/www\.nntb\.no\/~dreibh\/.*\)$/#\1/g" | \
+# NNTB:
+#          -e "s/^#\(.*https:\/\/www\.nntb\.no\/~dreibh\/.*\)/\1/g" \
 #          -e "s/^\([^#].*https:\/\/www\.simula\.no\/people\/dreibh.*\)$/#\1/g" | \
 
 ACTIVE='https:\/\/simula.no\/people\/dreibh'
-INACTIVE='https:\/\/www.uni-due.de\/~be0001\/'
+INACTIVE='https:\/\/www.nntb.no\/~dreibh\/'
 
 (
    head -n1 authors.list
    grep -v "^Name " authors.list | \
       sed \
-         -e "s/^#\(.*https:\/\/www\.simula\.no\/people\/dreibh.*\)/\1/g" \
-         -e "s/^\([^#].*https:\/\/www\.uni-due\.de\/~be0001\/.*\)$/#\1/g" | \
+         -e "s/^#\(.*https:\/\/www\.nntb\.no\/~dreibh\/.*\)/\1/g" \
+         -e "s/^\([^#].*https:\/\/www\.simula\.no\/people\/dreibh.*\)$/#\1/g" | \
       env LANG=C sort -u
 ) >authors.list.new
 mv authors.list.new authors.list

@@ -170,7 +170,7 @@ echo \n
 
 
 echo <p class="description" style="font-size:75%;">\n
-echo Publications list generated <!-- BEGIN-OF-DATE -->recently<!-- END-OF-DATE --> by Thomas Dreibholz's <a href="https://www.uni-due.de/~be0001/bibtexconv/">BibTeXConv</a> script.\n
+echo Publications list generated <!-- BEGIN-OF-DATE -->recently<!-- END-OF-DATE --> by Thomas Dreibholz's <a href="https://www.nntb.no/~dreibh/bibtexconv/">BibTeXConv</a> script.\n
 echo </p>\n
 
 
