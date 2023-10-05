@@ -90,6 +90,7 @@ template+ [%x%{is?norsk}<img style="height: 0.75em;" alt="in Norwegian" title="i
 template+ |%x%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />
 template+ |%x%{is?chinese}<img style="height: 0.75em;" alt="in Chinese" title="in Chinese" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-china.png" />
 template+ |%x%{is?english}<img style="height: 0.75em;" alt="in English" title="in English" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-england.png" />
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #template+ [%x%{is?norsk}🇳🇴
 #template+ |%x%{is?german}🇩🇪
 #template+ |%x%{is?chinese}🇨🇳
