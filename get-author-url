@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Web example script to get HTML author URL from author in list
-# Copyright (C) 2014-2020 by Thomas Dreibholz
+# Copyright (C) 2014-2024 by Thomas Dreibholz
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ authorText = sys.argv[3]
 
 csv.register_dialect('authors', delimiter=' ', quoting=csv.QUOTE_MINIMAL,skipinitialspace=True)
 
-inputFile = open('authors.list', 'r')
+inputFile = open(authorList, 'r')
 inputCSV = csv.reader(inputFile, dialect='authors')
 
 authorRow = None
@@ -47,7 +47,7 @@ for row in inputCSV:
    if row[0] == authorName:
       if authorRow != None:
          # the authorName is multiple times in the table -> warning
-         sys.stderr.write('WARNING: Multiple occurences of authorName ' + authorName + ' in ' + fileName, '!\n')
+         sys.stderr.write('WARNING: Multiple occurences of authorName ' + authorName + ' in ' + authorList + '!\n')
       authorRow = row
 
 

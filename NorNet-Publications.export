@@ -1,6 +1,3 @@
-# $Id: EN-Publications-Online-HTML.export 3242 2012-11-30 19:59:03Z dreibh $
-
-
 # ###########################################################################
 # #### Export to XHTML 1.1                                               ####
 # ###########################################################################
@@ -45,6 +42,7 @@ echo  <li><a href="#Presentations">Presentations</a></li>\n
 echo  <li><a href="#Standardisation">Standardisation Documents</a></li>\n
 echo  <li><a href="#Theses">Theses</a></li>\n
 echo  <li><a href="#Reports">Reports</a></li>\n
+echo  <li><a href="#Datasets">Datasets</a></li>\n
 echo </ul>\n
 
 echo <p class=\"description\">\n
@@ -165,6 +163,13 @@ echo \n
 clear
 echo <h3 id="Reports">Reports</h3>\n
 include nornet-others.export
+sort year/D month/D day/D title/A
+export
+echo \n
+
+clear
+echo <h3 id="Datasets">Datasets</h3>\n
+include nornet-datasets.export
 sort year/D month/D day/D title/A
 export
 echo \n

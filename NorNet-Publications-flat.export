@@ -1,5 +1,3 @@
-# $Id: EN-Publications-Online-HTML.export 3242 2012-11-30 19:59:03Z dreibh $
-
 # Select entries.
 include nornet-others.export
 include nornet-papers.export
@@ -10,6 +8,7 @@ include nornet-id-individual.export
 include nornet-journals.export
 include nornet-posters-and-demos.export
 include nornet-talks.export
+include nornet-datasets.export
 
 sort year/D month/D day/D title/A
 
