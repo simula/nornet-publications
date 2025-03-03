@@ -1,5 +1,5 @@
 #!/bin/sh -e
 
 echo "RSync'ing bib and xml files ..."
-rsync -av --delete bibxml bibtex graphics nornetpp@voksenkollen.proxmox.crnalab.net:/usr/share/wordpress/pub/nornet-publications/
+rsync -4av --delete bibxml bibtex graphics nornetpp@voksenkollen.proxmox.crnalab.net:/usr/share/wordpress/pub/nornet-publications/
 echo "Note: the publications page needs to be updated manually with HTML code from NorNet-Publications.html!"
