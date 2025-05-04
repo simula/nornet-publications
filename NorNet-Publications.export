@@ -39,39 +39,29 @@ xmlStyle
 nbsp &nbsp;
 linebreak <br />
 
-# # ------ Write the HTML header ----------------------------------------------
-# echo <?xml version="1.0" encoding="utf-8" ?>\n
-# echo <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">\n
-# echo <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">\n
-# echo <head>\n
-# echo <title>Publications</title>\n
-# echo <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n
-# echo <meta name="Author" content="BibTeXConv" />\n
-# echo <meta name="Description" content="List of Publications" />\n
-# echo <meta name="Keywords" content="Publications" />\n
-# echo <meta name="Classification" content="Publications" />\n
-# echo <meta name="Viewport" content="width=device-width; initial-scale=1" />\n
-# echo <link rel="stylesheet" href="https://www.nntb.no/~dreibh/stylesheet.css" type="text/css" />\n
-#
-# echo <script type="text/javascript" src="publication-list-treeview.js"></script>\n
-#
-# echo <style>\n
-# echo li.treeview-collapsed {\n
-# echo    list-style-image: url(Images/ListItem-Collapsed.svg);\n
-# echo }\n
-#
-# echo li.treeview-expanded {\n
-# echo    list-style-image: url(Images/ListItem-Expanded.svg);\n
-# echo }\n
-# echo </style>\n
-#
-# echo </head>\n
-#
-# echo <body>\n\n
-#
-#
-# echo <!-- ###### Publications ############################################# -->\n
-# echo <h2 id="Publications">Publications</h2>\n\n
+# ------ Write the HTML header ----------------------------------------------
+echo <?xml version="1.0" encoding="utf-8" ?>\n
+echo <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">\n
+echo <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">\n
+echo <head>\n
+echo <title>Publications</title>\n
+echo <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n
+echo <meta name="Author" content="BibTeXConv" />\n
+echo <meta name="Description" content="List of Publications" />\n
+echo <meta name="Keywords" content="Publications" />\n
+echo <meta name="Classification" content="Publications" />\n
+echo <meta name="Viewport" content="width=device-width; initial-scale=1" />\n
+echo <link rel="stylesheet" href="https://www.nntb.no/~dreibh/stylesheet.css" type="text/css" />\n
+
+echo </head>\n
+
+echo <body>\n\n
+
+
+echo <!-- ###### Publications ############################################# -->\n
+echo <h2 id="Publications">Publications</h2>\n\n
+
+echo <!-- BEGIN-OF-PUBLICATIONS -->\n
 
 
 echo <ul>\n
@@ -90,9 +80,6 @@ echo </p>\n\n
 
 # ====== This is the printing template ======================================
 templatenew
-
-# ***** Begin of Subsection: YEAR *******************************************
-template+ [%{begin-subdivision-year}<h3>%{year}</h3><ul>\n\n]
 
 # ***** Begin of Subsection: YEAR *******************************************
 template+ [%{begin-subdivision-year}<h3 id="Publications-%{year}">%{year}</h3><ul>\n\n]
@@ -126,7 +113,7 @@ template+ :
 # ***** Title ***************************************************************
 template+ <span[ xml:lang="%{xml-language}" lang="%{xml-language}"]>
 # If there is a URL, make a hyperlink, else only print the title:
-template+  [``<a[ type="%{url-mime}"] href="%{url}">%{title}</a>´´|``%{title}´´]
+template+  [«<a[ type="%{url-mime}"] href="%{url}">%{title}</a>»|«%{title}»]
 template+ </span>
 
 # ****** Document details ***************************************************
@@ -254,7 +241,9 @@ echo <p class="description" style="font-size:75%;">\n
 echo Publications list generated <!-- BEGIN-OF-DATE -->recently<!-- END-OF-DATE --> by Thomas Dreibholz's <a href="https://www.nntb.no/~dreibh/bibtexconv/">BibTeXConv</a> script.\n
 echo </p>\n
 
+echo <!-- END-OF-PUBLICATIONS -->\n\n
+
 
 # ====== Write the HTML footer ==============================================
-# echo </body>\n
-# echo </html>\n
+echo </body>\n
+echo </html>\n

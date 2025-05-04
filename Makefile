@@ -19,7 +19,7 @@
 REFERENCES=~/src/papers/Referenzarchiv.bib
 
 
-all:	bibtex/AllReferences.bib bibxml/AllReferences.xml
+all:	bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.html.section
 
 
 NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
@@ -30,6 +30,12 @@ NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
 	   >NorNet-Publications.html.in
 	sed -e "s/<\!-- BEGIN-OF-DATE -->.*<\!-- END-OF-DATE -->/<\!-- BEGIN-OF-DATE -->on `date "+%d.%m.%Y %H:%M:%S %Z"`<\!-- END-OF-DATE -->/g" <NorNet-Publications.html.in >NorNet-Publications.html
 	rm -f NorNet-Publications.html.in
+
+NorNet-Publications.html.section:	NorNet-Publications.html
+	text-block --extract --min-actions 1 \
+	   --begin-tag "- BEGIN-OF-PUBLICATIONS -" --end-tag "- END-OF-PUBLICATIONS -" \
+	   --exclude-tags --full-tag-line \
+	   --input NorNet-Publications.html --output NorNet-Publications.html.section
 
 bibtex/AllReferences.bib:	NorNet-Publications.html
 	mkdir -p bibtex
