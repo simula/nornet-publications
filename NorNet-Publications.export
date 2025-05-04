@@ -138,7 +138,8 @@ template+ [%{url}%{is-not?} \(|%{language}%{is-not?} \(]
 template+ [
 template+ [<a type="%{url-mime}" href="%{url}">%{url-type}</a>, ]
 template+ %{url-size-kib}~KiB
-template+ [, %{numpages}~pages]
+# Use plural or singular for number of pages: "n pages", or just "1 page":
+template+ [(%{numpages}%{is-not?1}), %{numpages}~pages|, %{numpages}~page]
 template+ ]
 # ------ Language -----------------------------------------------------------
 template+ [%{url-size-KiB}%{is-not?}[%{language}%{is-not?}, ]]
