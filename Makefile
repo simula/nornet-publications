@@ -28,8 +28,10 @@ NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
 	   --mapping=author-url:authors.list:Name:URL \
 	   <NorNet-Publications.export \
 	   >NorNet-Publications.html.in
-	sed -e "s/<\!-- BEGIN-OF-DATE -->.*<\!-- END-OF-DATE -->/<\!-- BEGIN-OF-DATE -->on `date "+%d.%m.%Y %H:%M:%S %Z"`<\!-- END-OF-DATE -->/g" <NorNet-Publications.html.in >NorNet-Publications.html
+	sed -e "s/<\!-- BEGIN-OF-DATE -->.*<\!-- END-OF-DATE -->/<\!-- BEGIN-OF-DATE -->on `date "+%d.%m.%Y %H:%M:%S %Z"`<\!-- END-OF-DATE -->/g" <NorNet-Publications.html.in >NorNet-Publications.html.out
 	rm -f NorNet-Publications.html.in
+	if which -s tidy ; then tidy -o /dev/null -q NorNet-Publications.html.out ; fi
+	mv NorNet-Publications.html.out NorNet-Publications.html
 
 NorNet-Publications.html.section:	NorNet-Publications.html
 	text-block --extract --min-actions 1 \

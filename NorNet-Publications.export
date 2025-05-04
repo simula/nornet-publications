@@ -82,7 +82,9 @@ echo </p>\n\n
 templatenew
 
 # ***** Begin of Subsection: YEAR *******************************************
-template+ [%{begin-subdivision-year}<h3 id="Publications-%{year}">%{year}</h3><ul>\n\n]
+# template+ [%{begin-subdivision-year}<h3 id="Publications-%{year}">%{year}</h3><ul>\n\n]
+# NOTE: No "id" here, since the template will be used multiple times!
+template+ [%{begin-subdivision-year}<h3>%{year}</h3><ul>\n\n]
 
 # ****** Begin of Entry *****************************************************
 template+ <li id="Publications-%{html-label}" class="treeview-collapsed">
