@@ -19,7 +19,7 @@
 REFERENCES=~/src/papers/Referenzarchiv.bib
 
 
-all:	bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.html.section
+all:	bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.html.block
 
 
 NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
@@ -33,11 +33,11 @@ NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
 	if which -s tidy ; then tidy -o /dev/null -q NorNet-Publications.html.out ; fi
 	mv NorNet-Publications.html.out NorNet-Publications.html
 
-NorNet-Publications.html.section:	NorNet-Publications.html
+NorNet-Publications.html.block:	NorNet-Publications.html
 	text-block --extract --min-actions 1 \
 	   --begin-tag "- BEGIN-OF-PUBLICATIONS -" --end-tag "- END-OF-PUBLICATIONS -" \
 	   --exclude-tags --full-tag-line \
-	   --input NorNet-Publications.html --output NorNet-Publications.html.section
+	   --input NorNet-Publications.html --output NorNet-Publications.html.block
 
 bibtex/AllReferences.bib:	NorNet-Publications.html
 	mkdir -p bibtex
