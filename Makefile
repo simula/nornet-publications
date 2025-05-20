@@ -43,9 +43,10 @@ bibtex/AllReferences.bib:	NorNet-Publications.html
 	mkdir -p bibtex
 	rm -f bibtex/AllReferences.txt
 	bibtexconv $(REFERENCES) --quiet \
-	   --add-notes-with-isbn-and-issn \
-	   --non-interactive \
-	   --export-to-separate-bibtexs=bibtex/
+	   --mapping=author-url:authors.list:Name:URL \
+	   --export-to-separate-bibtexs=bibtex/ \
+	   <NorNet-Publications.export \
+	   >/dev/null
 	find bibtex/ -name "*.bib" | sort | xargs cat >bibtex/AllReferences.txt
 	mv bibtex/AllReferences.txt bibtex/AllReferences.bib
 
@@ -53,8 +54,10 @@ bibxml/AllReferences.xml:	NorNet-Publications.html
 	mkdir -p bibxml
 	rm -f bibxml/AllReferences.txt
 	bibtexconv $(REFERENCES) --quiet \
+	   --mapping=author-url:authors.list:Name:URL \
 	   --export-to-separate-xmls=bibxml/ \
-	   --non-interactive
+	   <NorNet-Publications.export \
+	   >/dev/null
 	find bibxml/ -name "*.xml" | sort | xargs cat >bibxml/AllReferences.txt
 	mv bibxml/AllReferences.txt bibxml/AllReferences.xml
 
