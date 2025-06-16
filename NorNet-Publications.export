@@ -134,25 +134,15 @@ template+ ]
 template+ [(%{numpages}%{is-not?1}), %{numpages}~pages|, %{numpages}~page]
 template+ ]
 # ------ Language -----------------------------------------------------------
-template+ [%{url-size-KiB}%{is-not?}[%{language}%{is-not?}, ]]
+template+ [%{url}%{is-not?}[%{language}%{is-not?}, ]]
 template+ [
-# template+ %{language}%{is?english}in English|
-# template+ %{language}%{is?german}auf Deutsch|
-# template+ %{language}%{is?ngerman}auf Deutsch|
-# template+ %{language}%{is?norsk}på norsk|
-# template+ %{language}%{is?french}au français|
-# !!!!! WordPress 6.0.1 has problems with UTF-8 flags: failure to save posting !!!!!
-# template+ %{language}%{is?norsk}<img style="height: 0.75em;" alt="in Norwegian" title="in Norwegian" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-norway.png" />|
-# template+ %{language}%{is?german}<img style="height: 0.75em;" alt="in German" title="in German" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-germany.png" />|
-# template+ %{language}%{is?chinese}<img style="height: 0.75em;" alt="in Chinese" title="in Chinese" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-china.png" />|
-# template+ %{language}%{is?english}<img style="height: 0.75em;" alt="in English" title="in English" src="https://www.nntb.no/pub/nornet-publications/graphics/flags/flag-england.png" />|
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-template+ %{language}%{is?english}🇬🇧|
-template+ %{language}%{is?norsk}🇳🇴|
-template+ %{language}%{is?german}🇩🇪|
-template+ %{language}%{is?ngerman}🇩🇪|
-template+ %{language}%{is?chinese}🇨🇳|
-template+ %{language}%{is?french}🇫🇷|
+template+ [%{content-language}|%{language}]%{is?german}auf Deutsch|
+template+ [%{content-language}|%{language}]%{is?ngerman}auf Deutsch|
+template+ [%{content-language}|%{language}]%{is?norsk}på norsk|
+template+ [%{content-language}|%{language}]%{is?chinese}in Chinese|
+template+ [%{content-language}|%{language}]%{is?french}au français|
+template+ [%{content-language}|%{language}]%{is?english}in English|
+template+ in %{content-language}|
 template+ in %{language}
 template+ ]
 
