@@ -136,12 +136,12 @@ template+ ]
 # ------ Language -----------------------------------------------------------
 template+ [%{url}%{is-not?}[%{language}%{is-not?}, ]]
 template+ [
-template+ [%{content-language}|%{language}]%{is?german}auf Deutsch|
-template+ [%{content-language}|%{language}]%{is?ngerman}auf Deutsch|
-template+ [%{content-language}|%{language}]%{is?norsk}på norsk|
-template+ [%{content-language}|%{language}]%{is?chinese}in Chinese|
-template+ [%{content-language}|%{language}]%{is?french}au français|
-template+ [%{content-language}|%{language}]%{is?english}in English|
+template+ [%{content-language}|%{language}]%{is?german}🇩🇪|
+template+ [%{content-language}|%{language}]%{is?ngerman}🇩🇪|
+template+ [%{content-language}|%{language}]%{is?norsk}🇳🇴|
+template+ [%{content-language}|%{language}]%{is?chinese}🇨🇳|
+template+ [%{content-language}|%{language}]%{is?french}🇫🇷|
+template+ [%{content-language}|%{language}]%{is?english}🇬🇧|
 template+ in %{content-language}|
 template+ in %{language}
 template+ ]
