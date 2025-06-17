@@ -59,7 +59,7 @@ echo <body>\n\n
 
 
 echo <!-- ###### Publications ############################################# -->\n
-echo <h2 id="Publications">Publications</h2>\n\n
+echo <h2 id="Publications">NorNet Publications</h2>\n\n
 
 echo <!-- BEGIN-OF-PUBLICATIONS -->\n
 

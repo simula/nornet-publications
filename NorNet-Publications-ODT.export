@@ -1,0 +1,195 @@
+# ==========================================================================
+#                ____  _ _   _____   __  ______
+#                | __ )(_) |_|_   _|__\ \/ / ___|___  _ ____   __
+#                |  _ \| | '_ \| |/ _ \  / |   / _ \| '_ \ \ / /
+#                | |_) | | |_) | |  __//  \ |__| (_) | | | \ V /
+#                |____/|_|_.__/|_|\___/_/\_\____\___/|_| |_|\_/
+#
+#                          ---  BibTeX Converter  ---
+#                   https://www.nntb.no/~dreibh/bibtexconv/
+# ==========================================================================
+#
+# BibTeXConv XHTML 1.1 Export Example
+# Copyright (C) 2010-2025 by Thomas Dreibholz
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Contact: thomas.dreibholz@gmail.com
+
+
+# Select entries.
+# -- BEGIN-OF-INCLUDES --
+include nornet-others.export
+include nornet-papers.export
+include nornet-rfcs.export
+include nornet-theses.export
+include nornet-id-workinggroup.export
+include nornet-id-individual.export
+include nornet-journals.export
+include nornet-posters-and-demos.export
+include nornet-talks.export
+include nornet-datasets.export
+# -- END-OF-INCLUDES --
+sort year/D month/D day/D title/A
+
+
+# ###########################################################################
+# #### Export to OpenDocument Text (ODT)                                 ####
+# ###########################################################################
+
+# ====== Set header and trailer of each publication entry ===================
+# ----- Encode strings in XML style, e.g. <, >, &, etc.----------------------
+xmlStyle
+# ----- Non-breakable space character (2 bytes!) used by ODT ----------------
+nbsp \xc2\xa0
+
+
+# ------ Write the ODT header in contents.xml -------------------------------
+echo <?xml version="1.0" encoding="UTF-8"?>\n
+echo <office:document-content xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0">\n
+echo \n
+echo <office:automatic-styles>\n
+
+echo   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">\n
+echo     <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>\n
+echo   </style:style>\n
+echo   <style:style style:name="T1" style:family="text">\n
+echo     <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>\n
+echo   </style:style>\n
+echo   <style:style style:name="T2" style:family="text">\n
+echo     <style:text-properties fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>\n
+echo   </style:style>\n
+echo   <style:style style:name="T3" style:family="text">
+echo      <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
+echo   </style:style>
+
+echo </office:automatic-styles>\n
+echo \n
+echo <office:body>\n
+echo <office:text>\n
+echo \n
+
+echo <text:h text:style-name="Heading_20_1" text:outline-level="1">References</text:h>\n
+echo \n
+
+
+# ====== This is the printing template ======================================
+templatenew
+
+# ***** Subsection: YEAR ****************************************************
+template+ [%{begin-subdivision-year}<text:h text:style-name="Heading_20_2" text:outline-level="2">%{year}</text:h>]
+
+# ***** Subsubsection: MONTH ************************************************
+# template+ [%{begin-subdivision-month}<text:h text:style-name="Heading_20_3" text:outline-level="3">%{month-name}</text:h>]
+
+# ****** Begin of Entry *****************************************************
+template+ <text:p text:style-name="P1">
+
+# ***** Authors *************************************************************
+template+ <text:span text:style-name="T1">
+# Set mark with label:
+template+ \[<text:bookmark-start text:name="%{label}"/>%{anchor}<text:bookmark-end text:name="%{label}"/>\][ ]
+
+# Begin of author loop:
+template+ %{begin-author-loop}
+
+# Separator, for first/last/middle author:
+template+ [%{is-first-author?}|%{is-not-first-author?}; | and ]%{author-family-name}[, %{author-give-name}]
+
+# End of author loop:
+template+ %{end-author-loop}
+template+ :[ ]
+template+ </text:span>
+
+# ***** Title ***************************************************************
+template+ “[<text:a xlink:type="simple" xlink:href="%{url}">%{title}</text:a>|%{title}]”
+
+# ****** Document details ***************************************************
+# The document details appear in braces ( ... ), if they are available.
+# Add opening parenthesis "(", if "url" or "language" are set:
+template+ [%{url}%{is-not?} \(|%{language}%{is-not?} \(]
+
+# ------ Download -----------------------------------------------------------
+template+ [
+# Only show file type and length for non-HTML types:
+template+ [%{url-type}%{is-not?HTML}
+template+ <text:a xlink:type="simple" xlink:href="%{url}">[%{url-type}|Online]</text:a>
+template+ [, %{url-size-kib}~KiB]
+template+ ]
+# Use plural or singular for number of pages: "n pages", or just "1 page":
+template+ [(%{numpages}%{is-not?1}), %{numpages}~pages|, %{numpages}~page]
+template+ ]
+# ------ Language -----------------------------------------------------------
+template+ [%{url}%{is-not?}[%{language}%{is-not?}, ]]
+template+ [
+template+ [%{content-language}|%{language}]%{is?norsk}🇳🇴|
+template+ [%{content-language}|%{language}]%{is?german}🇩🇪|
+template+ [%{content-language}|%{language}]%{is?ngerman}🇩🇪|
+template+ [%{content-language}|%{language}]%{is?chinese}🇨🇳|
+template+ [%{content-language}|%{language}]%{is?french}🇫🇷|
+template+ [%{content-language}|%{language}]%{is?english}🇬🇧|
+template+ in %{content-language}|
+template+ in %{language}
+template+ ]
+
+# Add closing parenthesis ")", if "url" or "language" are set:
+template+ [%{url}%{is-not?}%{url-type}%{is-not?HTML}\)|%{language}%{is-not?}\)]
+
+# ***** Bibliographic data of publication ***********************************
+template+ [, %{how-published}]
+template+ [, in <text:span text:style-name="T3">%{journal}</text:span>]
+template+ [, in <text:span text:style-name="T3">%{booktitle}</text:span>]
+template+ [
+template+ , %{type}[~%{number}][, %{series}][, vol.~%{volume}][, pp.~%{pages}]|
+template+ [, %{series}][, vol.~%{volume}][, no.~%{number}][, pp.~%{pages}]
+template+ ]
+template+ [, %{publisher}]
+template+ [, %{school}]
+template+ [, %{institution}]
+template+ [, URN~<text:a xlink:type="simple" xlink:href="https://www.nbn-resolving.de/%{urn}">%{urn}</text:a>]
+template+ [, DOI~<text:a xlink:type="simple" xlink:href="https://dx.doi.org/%{doi}">%{doi}</text:a>]
+template+ [, %{isbn}]
+template+ [, %{issn}]
+template+ [, %{address}]
+template+ [, %{note}]
+template+ [, [%{month-name}~%{day}, |%{month-name}~]%{year}]
+template+ .
+
+# ****** Awards *************************************************************
+template+ [ <text:span text:style-name="T1">%{custom-1}.</text:span>]
+
+# ***** URL including hyperlink *********************************************
+template+ [
+# Newline:
+template+ </text:p><text:p text:style-name="P1">
+
+template+ <text:span text:style-name="T2">
+template+ 🔗<text:a xlink:type="simple" xlink:href="%{url}">%{url}</text:a>.
+template+ </text:span>
+template+ ]
+
+# ****** End of Entry *******************************************************
+template+ </text:p>
+# New line:
+template+ <text:p text:style-name="P1" />
+
+
+# ====== Finally, export all selected publications ==========================
+export
+
+
+# ====== Generate tail for ODT contents.xml =================================
+echo </office:text>
+echo </office:body>
+echo </office:document-content>

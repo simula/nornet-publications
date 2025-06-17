@@ -19,7 +19,7 @@
 REFERENCES=~/src/papers/Referenzarchiv.bib
 
 
-all:	bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.html.block
+all:	bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.html.block NorNet-Publications.odt
 
 
 NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
@@ -61,6 +61,10 @@ bibxml/AllReferences.xml:	NorNet-Publications.html
 	find bibxml/ -name "*.xml" | sort | xargs cat >bibxml/AllReferences.txt
 	mv bibxml/AllReferences.txt bibxml/AllReferences.xml
 
+NorNet-Publications.odt:	NorNet-Publications-ODT.export bibtex/AllReferences.bib
+	bibtexconv-odt /usr/share/doc/bibtexconv/examples/ODT-Template.odt NorNet-Publications.odt bibtex/AllReferences.bib  NorNet-Publications-ODT.export
+
+
 clean:
-	rm -f *~ NorNet-Publications.html bibtex/AllReferences.bib bibxml/AllReferences.xml
+	rm -f *~ NorNet-Publications.html bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.odt
 	rm -rf bibtex/ bibxml/
