@@ -167,6 +167,12 @@ template+ [, %{issn}]
 template+ [, %{address}]
 template+ [, %{note}]
 template+ [, [%{month-name}~%{day}, |%{month-name}~]%{year}]
+
+# ~~~~~~~ BibTeX and XML files ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+template+ [, \[<a type="text/x-bibtex" href="https://www.nntb.no/pub/nornet-publications/bibtex/%{label}.bib">BibTeX</a>]
+template+ [, <a type="text/xml" href="https://www.nntb.no/pub/nornet-publications/bibxml/%{label}.xml">XML</a>\]]
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 template+ .
 
 # ****** Awards *************************************************************
