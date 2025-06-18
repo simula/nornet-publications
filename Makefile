@@ -19,7 +19,9 @@
 REFERENCES=~/src/papers/Referenzarchiv.bib
 
 
-all:	bibtex/AllReferences.bib bibxml/AllReferences.xml NorNet-Publications.html.block NorNet-Publications.odt
+all:	bibtex/AllReferences.bib bibxml/AllReferences.xml \
+	NorNet-Publications.html.block \
+	NorNet-Publications.odt NorNet-Publications.docx
 
 
 NorNet-Publications.html:	$(REFERENCES) NorNet-Publications.export
@@ -41,28 +43,36 @@ NorNet-Publications.html.block:	NorNet-Publications.html
 
 bibtex/AllReferences.bib:	NorNet-Publications.html
 	mkdir -p bibtex
-	rm -f bibtex/AllReferences.txt
+	rm -f bibtex/AllReferences.out
 	bibtexconv $(REFERENCES) --quiet \
 	   --mapping=author-url:authors.list:Name:URL \
 	   --export-to-separate-bibtexs=bibtex/ \
 	   <NorNet-Publications.export \
 	   >/dev/null
-	find bibtex/ -name "*.bib" | sort | xargs cat >bibtex/AllReferences.txt
-	mv bibtex/AllReferences.txt bibtex/AllReferences.bib
+	find bibtex/ -name "*.bib" | sort | xargs cat >bibtex/AllReferences.out
+	mv bibtex/AllReferences.out bibtex/AllReferences.bib
 
 bibxml/AllReferences.xml:	NorNet-Publications.html
 	mkdir -p bibxml
-	rm -f bibxml/AllReferences.txt
+	rm -f bibxml/AllReferences.out
 	bibtexconv $(REFERENCES) --quiet \
 	   --mapping=author-url:authors.list:Name:URL \
 	   --export-to-separate-xmls=bibxml/ \
 	   <NorNet-Publications.export \
 	   >/dev/null
-	find bibxml/ -name "*.xml" | sort | xargs cat >bibxml/AllReferences.txt
-	mv bibxml/AllReferences.txt bibxml/AllReferences.xml
+	print-utf8 -n '<?xml version="1.0" encoding="UTF-8"?>' >bibxml/AllReferences.out
+	echo "<references>" >>bibxml/AllReferences.out
+	echo "" >>bibxml/AllReferences.out
+	find bibxml/ -name "*.xml" -a ! -name "AllReferences.xml" | sort | xargs -n1 text-block -X --select 3 0 -i >>bibxml/AllReferences.out
+	echo "" >>bibxml/AllReferences.out
+	echo "</references>" >>bibxml/AllReferences.out
+	mv bibxml/AllReferences.out bibxml/AllReferences.xml
 
 NorNet-Publications.odt:	NorNet-Publications-ODT.export bibtex/AllReferences.bib
 	bibtexconv-odt /usr/share/doc/bibtexconv/examples/ODT-Template.odt NorNet-Publications.odt bibtex/AllReferences.bib  NorNet-Publications-ODT.export
+
+NorNet-Publications.docx:	NorNet-Publications.odt
+	./odt2docx NorNet-Publications.odt
 
 
 clean:

@@ -73,9 +73,15 @@ echo  <li><a href="#Reports">Reports</a></li>\n
 echo  <li><a href="#Datasets">Datasets</a></li>\n
 echo </ul>\n
 
-echo <p class=\"description\">\n
-echo The complete BibTeX references in a single file can be found <a type="text/x-bibtex" href="https://www.nntb.no/pub/nornet-publications/bibtex/AllReferences.bib">here</a>!\n
+# ~~~~~~~ Combined references in different formats ~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo <p class=\"description\">
+echo The collected references in a single file are available as:
+echo  <a type="text/x-bibtex" href="https://www.nntb.no/pub/nornet-publications/bibtex/AllReferences.bib">BiBTeX file</a>,
+echo  <a type="text/xml" href="https://www.nntb.no/pub/nornet-publications/bibxml/AllReferences.xml">XML file</a>,
+echo  <a type="application/vnd.oasis.opendocument.text" href="https://www.nntb.no/pub/nornet-publications/NorNet-Publications.odt">ODT file</a>,
+echo  <a type="application/vnd.openxmlformats-officedocument.wordprocessingml.document" href="https://www.nntb.no/pub/nornet-publications/NorNet-Publications.docx">DOCX file</a>.
 echo </p>\n\n
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 # ====== This is the printing template ======================================

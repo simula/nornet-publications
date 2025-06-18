@@ -80,7 +80,7 @@ echo <office:body>\n
 echo <office:text>\n
 echo \n
 
-echo <text:h text:style-name="Heading_20_1" text:outline-level="1">References</text:h>\n
+echo <text:h text:style-name="Heading_20_1" text:outline-level="1">NorNet Publications</text:h>\n
 echo \n
 
 
