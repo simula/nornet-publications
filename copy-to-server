@@ -24,5 +24,6 @@ rsync -4av --delete \
    NorNet-Publications.odt NorNet-Publications.docx \
    nornetpp@voksenkollen.proxmox.crnalab.net:/usr/share/wordpress/pub/nornet-publications/
 
-echo ""
-echo "Note: the publications page needs to be updated manually with HTML code from NorNet-Publications.html.block!"
+echo "\e[34;1m"
+print-utf8 -nc "Note: the publications page needs to be updated \e[4mmanually\e[24m with HTML code from NorNet-Publications.html.block!"
+echo "\e[0m"
